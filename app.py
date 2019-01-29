@@ -15,9 +15,6 @@ app.secret_key = "testkey"
 api = Api(app)
 	
 
-def home('/'):
-	return 404
-
 jwt = JWT(app, authenticate, identity)
 		
 api.add_resource(Item, '/item/<string:name>')
